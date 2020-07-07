@@ -7,3 +7,4 @@ Then run
 - npm i nodemon -D
 - npm run dev
 
+Finish open your browser in the URL "localhost:3000"
