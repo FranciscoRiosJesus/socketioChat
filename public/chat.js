@@ -19,9 +19,16 @@ message.addEventListener('keypress', function () {
 
 socket.on('chat:message', function (data) {
     actions.innerHTML = '';
-    output.innerHTML += `<p>
-        <strong>${data.username}</strong>: ${data.message}
-    </p>`
+    console.log(username.value + " - " + data.username);
+    if(username.value === data.username) {
+        output.innerHTML += `<p align="right">
+            <strong>${data.username}</strong>: ${data.message}
+        </p>`
+    } else {
+        output.innerHTML += `<p align="left">
+            <strong>${data.username}</strong>: ${data.message}
+        </p>`
+    }
 });
 
 
@@ -30,3 +37,4 @@ socket.on('chat:typing', function (data) {
         <em>${data} is typing a message</em>
     </p>`
 });
+

@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Socket.io</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="tittle justify-content-center align-items-center">
         <h1><b>Fun <div class="accent-text">chat.</div></b></h1>
     </div>
-            <div class="card col text-center justify-content-center align-self-center">
-                <div class="card-body">
-                    <div class="chat-window">
-                        <div class="output" id="output">
-                        </div>
-                        <div class="action" id="actions">
-                        </div>
+    <div class="card col text-center justify-content-center align-self-center">
+        <div class="form input-group card-body">
+            <div class="card-body">
+                <div class="chat-window">
+                    <div class="output" id="output">
+                    </div>
+                    <div class="action" id="actions">
                     </div>
                 </div>
-                <div class="form input-group card-body">
-                    <div class="input-group mb-3">
-                        <input type="text" id="username" placeholder="Username">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" id="message" placeholder="Message">
-                    </div>
-                    <div class="input-group mb-3"></div>
-                        <button class="btn btn-primary" id="send">Send</button>
-                    </div>
+            
+                <div class="input-group mb-3">
+                    <label for="username">Name: </label>
+                    <input class="input" type="text" name="username" id="username" placeholder="Name" required>
                 </div>
+                <div class="input-group mb-3">
+                    <label for="username">Message: </label>
+                    <input class="input" type="text" name="message" id="message" placeholder="message" required>
+                </div>
+                <button class="btn btn-primary" id="send">Send</button>
             </div>
+        </div>
+    </div>
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
     <script src="chat.js" charset="utf-8"></script>
 </body>
+
 </html>
